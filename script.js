@@ -52,7 +52,7 @@ Wagon.prototype.join = function (traveler) {
 }
 
 Wagon.prototype.shouldQuarantine = function () {
-  return this.passengers.some(passenger => passenger.isHealthy)
+  return this.passengers.some(passenger => !passenger.isHealthy)
 }
 
 Wagon.prototype.totalFood = function () {
